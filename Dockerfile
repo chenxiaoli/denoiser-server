@@ -4,6 +4,7 @@ FROM python:3.8-slim
 WORKDIR /app
 
 # Install system dependencies
+COPY sources.list /var/lib/apt/lists/sources.list
 RUN apt-get update && apt-get install -y \
     ffmpeg \
     libsndfile1 \
